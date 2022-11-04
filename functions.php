@@ -36,3 +36,11 @@ if ( ! function_exists( 'ali_styles' ) ) :
   endif;
   
   add_action( 'wp_enqueue_scripts', 'ali_styles' );
+
+  /*-----------------------------------------------------------
+Customising The Excerpt Lenght
+------------------------------------------------------------*/
+function custom_excerpt_lenght($length) {
+	return 25;
+}
+add_filter('excerpt_length', 'custom_excerpt_lenght');
